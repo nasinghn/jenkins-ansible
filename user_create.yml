@@ -1,8 +1,8 @@
 ---
 - hosts: localhost
   vars:
-    - username: "{{ user_name }}"
-    - home: "{{ user_home }}"
+    - username: $USER
+    - home: $HOME
   tasks:
     - name: print variables
       debug:
