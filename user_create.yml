@@ -2,7 +2,7 @@
 - hosts: localhost
   vars:
     - username: "{{ USER }}"
-    - home: "{{ HOME }}"
+    - home: "{{ GROUP }}"
   tasks:
     - name: print variables
       debug:
