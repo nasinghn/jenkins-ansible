@@ -9,3 +9,6 @@
          uid: "{{ item.uid }}"
          state: present
         with_items: "{{ user_details }}"
+      - name: making changes to playbook
+        debug:
+          msg: "testing git and jenkins setup"
