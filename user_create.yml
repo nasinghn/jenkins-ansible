@@ -4,6 +4,6 @@
     - username: "{{ USER }}"
     - home: "{{ GROUP }}"
   tasks:
-    - name: print variables
+    - name: print variables values
       debug:
         msg: "Username: {{ username }}, Home dir: {{ home }}"
