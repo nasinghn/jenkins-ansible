@@ -1,14 +1,9 @@
-- hosts: all
-  become: true
-  vars_files:
-      - /etc/ansible/vars.yml
+---
+- hosts: localhost
+  vars:
+    - username: "{{ user_name }}"
+    - home: "{{ user_home }}"
   tasks:
-      - name: more complex items to add several users
-        user:
-         name: "{{ item.name }}"
-         uid: "{{ item.uid }}"
-         state: present
-        with_items: "{{ user_details }}"
-      - name: making changes to playbook
-        debug:
-          msg: "testing git and jenkins webhook setup"
+    - name: print variables
+      debug:
+        msg: "Username: {{ username }}, Home dir: {{ home }}"
