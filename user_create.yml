@@ -6,4 +6,4 @@
   tasks:
     - name: print variables values
       debug:
-        msg: "Username: {{ username }}, Home dir: {{ home }}"
+        msg: "NAME: {{ username }}, HOME: {{ home }}"
